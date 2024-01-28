@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(217, 245, 217);
+}
+.ayas{
+   border:solid;
+   border-radius: 25px;
+   font-size: larger;
+   text-align: start;
+   padding-left: 20px;
+   border-width: 1px;
+}
+#clicked{
+  background-color: rgb(223, 206, 244);
+  border-color: rgb(149, 38, 80);
+  border-width: 3px;
+  font-weight: 500px;
+}
+.audio{
+    visibility: hidden;
+}
+#download{
+   text-decoration: none;
+   color: rgb(102, 102, 218);
+ 
+}
+#button{
+   background-color: aliceblue;
+   margin-top: 100px;
+   border-width: 1px;
+   font-size: larger;
+  
+}
