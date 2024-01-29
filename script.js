@@ -5,7 +5,7 @@ uncall=(p,ids,s1)=>{
   s1.currentTime=0;
   index--;
   console.log("uncalled")
-  console.log(index)
+  console.log(index);
 }
 index=0
 call=(id)=>{       //uncalling
@@ -19,12 +19,16 @@ call=(id)=>{       //uncalling
   s1.play();
   index++;
   if(index>1){
-            uncall(store[0],store[1],store[2]);
-            store=[p,ids,s1]
+            uncall(x1,x2,x3);
+              x1=p;
+              x2=ids;
+              x3=s1;
           }
   else{
-    store=[p,ids,s1]
-  }
+    x1=p;
+    x2=ids;
+    x3=s1;
+ }
 
 }
 let audio=document.getElementsByClassName("audi");
