@@ -1,6 +1,7 @@
 let c1=[-1,-3];
 let j=2;
 newcall=(ids)=>{ 
+  location.reload(false);
 }
 uncall=(p,ids,s1)=>{
   p.setAttribute("id",ids);
