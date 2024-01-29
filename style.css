@@ -8,6 +8,7 @@ body{
    text-align: start;
    padding-left: 20px;
    border-width: 1px;
+   user-select: none;
 }
 #clicked{
   background-color: rgb(223, 206, 244);
