@@ -63,4 +63,5 @@ ayahsarray.forEach(element => {
    }
    )
 });
-
+let bi=document.getElementById("bi");
+  bi.innerText="Bismillahi Rahmani Raheem";
