@@ -63,14 +63,4 @@ ayahsarray.forEach(element => {
    }
    )
 });
-let bi=document.getElementById("bi");
-  bi.innerText="Bismillahi Rahmani Raheem"
-//starting
- let st=document.getElementById("info");
- st.innerHTML=`    <p style="background-color: bisque;text-align: center;color: crimson;font-size: x-large;" >Click on the Ayat to read</p>`;
-setTimeout(()=>{
- start(st);
-},1000);
-start=(st)=>{
-st.innerHTML=`<p style="display:none"></p>`
-};
+
