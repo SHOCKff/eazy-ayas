@@ -65,3 +65,19 @@ ayahsarray.forEach(element => {
 });
 let bi=document.getElementById("bi");
   bi.innerText="Bismillahi Rahmani Raheem";
+loopval=0;
+//loop setting
+let loop=document.getElementById("checkbox");
+loop.onclick=()=>{
+    if(loopval%2==0)
+    sounds.forEach(every=> {
+    every.loop=true;
+    });
+    else{
+    sounds.forEach(every=> {
+    every.loop=false;
+    });
+    };
+    loopval++;
+    console.log(loopval);
+}
