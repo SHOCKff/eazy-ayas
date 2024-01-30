@@ -44,4 +44,5 @@ body{
    font-size: large;
    float: right;
    margin-right: 50px;
+   user-select: none;
 }
