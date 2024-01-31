@@ -81,3 +81,25 @@ loop.onclick=()=>{
     loopval++;
     console.log(loopval);
 }
+}
+let work=document.getElementById("workspace");
+settingval=0
+let setting=document.getElementById("settingsicon");
+setting.onclick=()=>{
+    if(settingval%2==0){
+      work.setAttribute("style","display:block");
+      autoclose();
+      console.log("call");
+    }
+    else{
+      work.setAttribute("style","display:none");
+    };
+    settingval++;
+  }
+autoclose=()=>{
+  setTimeout(()=>{
+    console.log("call");
+    work.setAttribute("style","display:none")
+    console.log("call")},4000)
+};
+
