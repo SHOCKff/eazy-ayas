@@ -1,14 +1,18 @@
 let c1=[-1,-3];
 let j=2;
 newcall=(ids)=>{ 
-  location.reload(false);
+
+  location.reload();
 }
 uncall=(p,ids,s1)=>{
+  console.log("uncalling")
   p.setAttribute("id",ids);
+  let ind=p.getAttribute("value");//uncalled tra
   s1.currentTime=0;
   s1.pause();
   s1.currentTime=0;
   index--;
+  untranscall(ind);
  // console.log(index);
  console.log("uncalled");
 }
@@ -22,25 +26,21 @@ call=(id)=>{       //uncalling
   let ids=id;
   s1.play();
   index++;
+  transcall(n);
   if(index>1){
-           // uncall(store[0],store[1],store[2]);
-           // store=[p,ids,s1]
            uncall(x1,x2,x3);
             x1=p;
             x2=ids;
             x3=s1;
-            console.log("not else")
           }
   else{
-   // store=[p,ids,s1]
    x1=p;
    x2=ids;
    x3=s1;
    }
-
-}
+};
 let audio=document.getElementsByClassName("audi");
-let sounds=[];
+sounds=[];
 for(let j=0;j<audio.length;j++){ 
     sounds.push(audio[j]);
 }
@@ -64,22 +64,25 @@ ayahsarray.forEach(element => {
    )
 });
 let bi=document.getElementById("bi");
-//  bi.innerText="Bismillahi Rahmani Raheem";
+  bi.innerText="Bismillahi Rahmani Raheem";
+////loop setting
 loopval=0;
-//loop setting
-let loop=document.getElementById("checkbox");
+let loop=document.getElementById("loopbox");
 loop.onclick=()=>{
-    if(loopval%2==0)
+    if(loopval%2==0&&time.length==0)
     sounds.forEach(every=> {
     every.loop=true;
-    });
+    })
+    else if(loopval%2==0&&time.length>0)
+     {
+      alert("Cannot use loop and autoplay at once")
+    }
     else{
     sounds.forEach(every=> {
     every.loop=false;
     });
     };
     loopval++;
-    console.log(loopval);
 };
 let work=document.getElementById("workspace");
 settingval=0
@@ -97,8 +100,67 @@ setting.onclick=()=>{
   }
 autoclose=()=>{
   setTimeout(()=>{
-    console.log("call");
-    work.setAttribute("style","display:none")
-    console.log("call")},5000)
+    work.setAttribute("style","display:none")},5000)
 };
+Transval=0;
+let nedar=[];
+let Tr=document.getElementsByClassName("E-ayas");
+let tb=document.getElementById("Translationbox");
+tb.onclick=()=>{
+    if(Transval%2==0){
+       nedar.push(1);
+    }  
+    else{
+      nedar.pop(1);
+    };
+    Transval++;
+}; 
+transcall=(ind)=>{
+  if(nedar.length==1)
+  {
+  Tr[ind].setAttribute("style","display:block");
+  }
+};
+untranscall=(ind)=>{
+  Tr[ind].setAttribute("style","display:none");
+};
+//Autoplay
+aplay=0;
+let ap=document.getElementById("Autoplaybox");
+let time=[];
+time[0]=parseInt(0,10)
+ap.onclick=()=>{
+  if(aplay%2==0){
+    sounds.forEach(tt =>
+    time.push(tt.duration));
+    autoplay();
+    }
+  else{
+    location.reload();
+      }
+  console.log(time);
+  aplay++;
+};
+//autoplay
+let sa=0;
+ij=parseInt(1,10)
+autoplay=()=>{
+  setTimeout(()=>
+  {
+    if(sa<array.length+1)
+    {
+     if(sa<array.length)
+        call(`${array[sa].getAttribute("id")}`);
+        sa++;
+    autoplay();}
+    else{
+      sa=0;
+      autoplay();
+    }
+},ij+time[sa]*1000);
+console.log(time[sa])
+};
+
+
+
 
