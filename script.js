@@ -81,7 +81,7 @@ loop.onclick=()=>{
     loopval++;
     console.log(loopval);
 }
-}
+};
 let work=document.getElementById("workspace");
 settingval=0
 let setting=document.getElementById("settingsicon");
