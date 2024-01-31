@@ -80,7 +80,6 @@ loop.onclick=()=>{
     };
     loopval++;
     console.log(loopval);
-}
 };
 let work=document.getElementById("workspace");
 settingval=0
