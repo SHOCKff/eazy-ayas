@@ -69,11 +69,11 @@ let bi=document.getElementById("bi");
 loopval=0;
 let loop=document.getElementById("loopbox");
 loop.onclick=()=>{
-    if(loopval%2==0&&time.length==0)
+    if(loopval%2==0&&time.length==)
     sounds.forEach(every=> {
     every.loop=true;
     })
-    else if(loopval%2==0&&time.length>0)
+    else if(loopval%2==0&&time.length>1)
      {
       alert("Cannot use loop and autoplay at once")
     }
