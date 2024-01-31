@@ -69,7 +69,7 @@ let bi=document.getElementById("bi");
 loopval=0;
 let loop=document.getElementById("loopbox");
 loop.onclick=()=>{
-    if(loopval%2==0&&time.length==)
+    if(loopval%2==0&&time.length>1)
     sounds.forEach(every=> {
     every.loop=true;
     })
