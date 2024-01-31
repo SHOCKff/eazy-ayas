@@ -100,6 +100,6 @@ autoclose=()=>{
   setTimeout(()=>{
     console.log("call");
     work.setAttribute("style","display:none")
-    console.log("call")},4000)
+    console.log("call")},5000)
 };
 
