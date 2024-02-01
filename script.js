@@ -1,6 +1,7 @@
 let c1=[-1,-3];
 let j=2;
 let time=[];
+let curr=[];
 time[0]=parseInt(0,10)
 newcall=(ids)=>{ 
 
@@ -13,6 +14,7 @@ uncall=(p,ids,s1)=>{
   s1.currentTime=0;
   s1.pause();
   s1.currentTime=0;
+  curr.pop();
   index--;
   untranscall(ind);
  // console.log(index);
@@ -27,6 +29,7 @@ call=(id)=>{       //uncalling
   s1=sounds[n]
   let ids=id;
   s1.play();
+  curr.push("1");
   index++;
   transcall(n);
   if(index>1){
@@ -130,7 +133,7 @@ untranscall=(ind)=>{
 aplay=0;
 let ap=document.getElementById("Autoplaybox");
 ap.onclick=()=>{
-  if(aplay%2==0){
+  if(aplay%2==0)&&curr.length==0{
     sounds.forEach(tt =>
     time.push(tt.duration));
     autoplay();
