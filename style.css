@@ -62,7 +62,7 @@ body{
     background-color: rgb(201, 201, 210);
     height: 55px;
     user-select: none;
-    display: non;
+    display: none;
 }
 .E-ayas{
    border:solid;
