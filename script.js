@@ -102,7 +102,7 @@ setting.onclick=()=>{
   }
 autoclose=()=>{
   setTimeout(()=>{
-    work.setAttribute("style","display:none")},5000)
+    work.setAttribute("style","display:none")},7000)
 };
 Transval=0;
 let nedar=[];
