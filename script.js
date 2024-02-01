@@ -133,7 +133,7 @@ untranscall=(ind)=>{
 aplay=0;
 let ap=document.getElementById("Autoplaybox");
 ap.onclick=()=>{
-  if(aplay%2==0)&&curr.length==0{
+  if(aplay%2==0&&curr.length==0){
     sounds.forEach(tt =>
     time.push(tt.duration));
     autoplay();
