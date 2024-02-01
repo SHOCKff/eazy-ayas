@@ -1,5 +1,7 @@
 let c1=[-1,-3];
 let j=2;
+let time=[];
+time[0]=parseInt(0,10)
 newcall=(ids)=>{ 
 
   location.reload();
@@ -69,7 +71,7 @@ let bi=document.getElementById("bi");
 loopval=0;
 let loop=document.getElementById("loopbox");
 loop.onclick=()=>{
-    if(loopval%2==0&&time.length>1)
+    if(loopval%2==0)
     sounds.forEach(every=> {
     every.loop=true;
     })
@@ -127,8 +129,6 @@ untranscall=(ind)=>{
 //Autoplay
 aplay=0;
 let ap=document.getElementById("Autoplaybox");
-let time=[];
-time[0]=parseInt(0,10)
 ap.onclick=()=>{
   if(aplay%2==0){
     sounds.forEach(tt =>
